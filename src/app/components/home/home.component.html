@@ -1,0 +1,21 @@
+<section class="info">
+    <h1 style="padding-bottom: 20px;"> <small>CALLCENTER </small></h1>
+    <!-- <div style="padding-bottom: 10px;">
+        <a class="btn btn-outline-danger btn-block" href="registrar">Registrar Heroes</a>
+    </div> -->
+    <div class="col animated fadeIn fast" *ngFor="let Clientes of Cliente; let i=index">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{Clientes.codigo}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{Clientes.fecha}}</h6>
+                <p class="card-text">
+                    Cliente: {{Clientes.cliente}}<br>Tipo: {{Clientes.tipo}}
+                    <br> Descripcion: {{Clientes.descripcion}}
+                </p>
+                <button (click)="modCliente(i)" type="button" class="btn btn-success">Modificar</button>
+                <span style="padding-left:25% ;"></span>
+                <button (click)="eliminar(i)" type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</section>
